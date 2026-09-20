@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Resume / CV</h1>
+        <p>An updated and well-formatted document outlining your professional journey:</p>
+        <ul class="point-list">
+            <li><strong>Education:</strong> Degrees, Rashtrasant Tukadoji Maharaj Nagpur University, 2027 years.</li>
+            <li><strong>Education:</strong> Diploma, government polytechnic gadchiroli, 2023 years.</li>
+            <li><strong>Work Experience:</strong> Past roles, responsibilities, and achievements.</li>
+            <li><strong>Certifications:</strong> Relevant industry credentials and badges.</li>
+        </ul>
+        <a href="#" class="btn">Download Resume (PDF)</a>
+    </main>
+    <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+
+    <footer>
+        <p>&copy; 2026 Professional Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+  const card = document.querySelector('main');
+  
+  document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    card.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+  });
+</script>
+</html>

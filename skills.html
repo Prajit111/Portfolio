@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Skills Section</h1>
+        <p>Highlighting core capabilities to pass keyword filters and recruiter scans:</p>
+        <ul class="point-list">
+            <li><strong>Technical Skills:</strong> Programming languages, frameworks, and databases.</li>
+            <li><strong>Software Proficiency:</strong> Developer tools, design tools, and platforms.</li>
+            <li><strong>Soft Skills:</strong> Communication, problem-solving, and team collaboration with context.</li>
+        </ul>
+        <a href="testimonials.html" class="btn">View Testimonials</a>
+    </main>
+    <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+
+    <footer>
+        <p>&copy; 2026 Professional Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+  const card = document.querySelector('main');
+  
+  document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    card.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+  });
+</script>
+</html>
